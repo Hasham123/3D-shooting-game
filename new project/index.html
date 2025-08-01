@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>3D Gun Shooting Game</title>
+  <style>
+    body, html { margin: 0; padding: 0; overflow: hidden; background: #000; color: white; font-family: Arial; }
+    #crosshair { position: absolute; top: 50%; left: 50%; width: 20px; height: 20px; border: 2px solid white; border-radius: 50%; transform: translate(-50%, -50%); }
+    #scoreboard, #health { position: absolute; top: 20px; font-size: 20px; }
+    #scoreboard { left: 20px; }
+    #health { right: 20px; }
+    #instructions { position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%); font-size: 16px; }
+    #resetBtn { position: absolute; top: 60px; left: 20px; padding: 10px 20px; background: #333; color: white; border: none; cursor: pointer; }
+    #resetBtn:hover { background: #555; }
+    #gameOver, #youWin {
+      display: none; 
+      position: absolute; 
+      top: 50%; left: 50%; 
+      transform: translate(-50%, -50%); 
+      font-size: 40px; 
+      text-align: center;
+    }
+    #gameOver { color: red; }
+    #youWin { color: lime; }
+  </style>
+</head>
+<body>
+  <div id="crosshair"></div>
+  <div id="scoreboard">Score: 0</div>
+  <div id="health">Health: 100</div>
+  <button id="resetBtn">Reset Game</button>
+  <div id="gameOver">GAME OVER</div>
+  <div id="youWin">YOU WIN!</div>
+  <div id="instructions">WASD to move | Mouse to look & shoot | ESC to unlock</div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/PointerLockControls.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>
